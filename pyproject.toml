@@ -1,0 +1,26 @@
+[project]
+name = "sag-tracker"
+version = "0.1.0"
+description = "Measure mountain bike suspension sag and rebound from a video"
+readme = "README.md"
+authors = [
+    { name = "Clement Merlande", email = "clement.merlande@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "numpy>=2.1",
+    "opencv-python>=4.10",
+    "scipy>=1.14",
+]
+
+[project.scripts]
+sag-tracker = "sag_tracker:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.0,<0.13.0"]
+build-backend = "uv_build"
